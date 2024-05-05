@@ -1,17 +1,12 @@
-name: Scheduled Ping
-# This workflow is triggered at a scheduled interval of every 30 minutes
+name: Ping TCP Repository
+ 
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string.
-    # /30 denotes that it will run once every 30 minutes
-    - cron:  '*/30 * * * *'
-
+  push:
+ 
 jobs:
-  pinger_job:
-    name: A job to ping
+  ping_test:
     runs-on: ubuntu-latest
-    env:
-      URL: mailla.eu.org
     steps:
-      - id: ping
-        uses: sisodiya2421/pinger@master
+    - name: Ping the Repository
+      run: |
+        ping -c 3 github.com
