@@ -11,7 +11,7 @@ jobs:
     name: A job to ping
     runs-on: ubuntu-latest
     env:
-      URL: ${mailla.eu.org}
+      URL: mailla.eu.org
     steps:
       - id: ping
         uses: sisodiya2421/pinger@master
