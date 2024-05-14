@@ -1,7 +1,7 @@
 name: Ping TCP Repository
  
 on:
-  push:
+  workflow_dispatch:
  
 jobs:
   ping_test:
